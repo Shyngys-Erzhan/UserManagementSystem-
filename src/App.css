@@ -1,0 +1,9 @@
+@import url("./assets/style/normalize.css");
+
+.App {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100vh;
+  margin-top: 10px;
+}

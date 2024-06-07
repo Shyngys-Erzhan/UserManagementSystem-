@@ -1,0 +1,8 @@
+.sidebarContainer {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+  gap: 20px;
+}
