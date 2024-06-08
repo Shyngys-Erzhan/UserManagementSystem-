@@ -1,6 +1,7 @@
 .mainContentContainer {
   width: 1135px;
   height: 589px;
-  background-color: red;
   margin-right: 350px;
+  border-radius: 15px;
+  background-color:white;
 }

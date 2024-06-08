@@ -1,0 +1,83 @@
+.UserItemContent {
+  max-width: 1135px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  position: relative;
+}
+.UserItemContainer {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+.inf {
+  display: flex;
+
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+.name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+}
+.email {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #9494a0;
+}
+.name,
+.email {
+  margin: 0;
+  padding: 2px 0;
+}
+.permissions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.permissionItem {
+  font-family: Futura PT;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  border: 1px solid #c1c1cb;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: white;
+  color: #9494a0;
+}
+
+.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+.button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

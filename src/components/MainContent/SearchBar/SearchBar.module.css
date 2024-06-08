@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: center;
+}
+.content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 44px;
+}
+.input {
+  width: 649px;
+  height: 36px;
+}
+.button {
+  background-color: #32c076;
+  border-color: #32c076;
+  border-radius: 10px;
+}

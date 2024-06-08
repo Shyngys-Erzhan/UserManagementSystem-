@@ -1,5 +1,5 @@
 import Sidebar from "./components/Sidebar/Sidebar";
-import UserList from "./components/MainContent/UserList";
+import UserList from "./components/MainContent/UserList/UserList.jsx";
 import "./App.css";
 
 function App() {
