@@ -11,13 +11,16 @@ function SearchBar({ onAddUser }) {
     permissions: ''
   });
 
+
   const showModal = () => {
     setIsModalVisible(true);
   };
 
+
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+
 
   const handleSave = () => {
     const userDataWithArrayPermissions = {
@@ -29,9 +32,11 @@ function SearchBar({ onAddUser }) {
     setNewUserData({ name: '', email: '', permissions: '' });
   };
 
+
   const handleChange = (e) => {
     setNewUserData({ ...newUserData, [e.target.name]: e.target.value });
   };
+
 
   return (
     <div className={style.content}>
@@ -41,7 +46,10 @@ function SearchBar({ onAddUser }) {
         suffix={<SearchOutlined />}
         className={style.input}
       />
-      <Button type="primary" className={style.button} onClick={showModal}>Добавить пользователя</Button>
+      <Button
+        type="primary"
+        className={style.button}
+        onClick={showModal}>Добавить пользователя</Button>
       <Modal
         title="Добавить нового пользователя"
         visible={isModalVisible}

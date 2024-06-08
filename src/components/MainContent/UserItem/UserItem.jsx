@@ -1,20 +1,23 @@
-// UserItem.js
 import React, { useState } from 'react';
 import { Menu, Dropdown } from 'antd';
 import style from "./UserItem.module.css";
 import buttonImage from "../../../assets/images/button.svg";
 import EditUserForm from '../EditUserForm/EditUserForm';
 
+
 function UserItem({ user, permissions, onDelete, onUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
-  const [userData, setUserData] = useState({ ...user });
+  const [userData] = useState({ ...user });
+
 
   const hasPermissions = Array.isArray(permissions) && permissions.length > 0;
+
 
   const handleUpdate = (updatedData) => {
     onUpdate({ ...userData, ...updatedData });
     setIsEditing(false);
   };
+
 
   const menu = (
     <Menu>
@@ -26,6 +29,7 @@ function UserItem({ user, permissions, onDelete, onUpdate }) {
       </Menu.Item>
     </Menu>
   );
+
 
   return (
     <div className={style.UserItemContent}>
@@ -43,7 +47,9 @@ function UserItem({ user, permissions, onDelete, onUpdate }) {
           </div>
         </div>
       </div>
-      <Dropdown overlay={menu} trigger={['click']}>
+      <Dropdown
+        overlay={menu}
+        trigger={['click']}>
         <button className={style.button}>
           <img src={buttonImage} alt='button' />
         </button>

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Input, Button } from 'antd';
 
+
 function EditUserForm({ user, visible, onSave, onCancel }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     permissions: ''
   });
+
 
   useEffect(() => {
     if (user) {
@@ -18,9 +20,11 @@ function EditUserForm({ user, visible, onSave, onCancel }) {
     }
   }, [user]);
 
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
 
   const handleSubmit = () => {
     const updatedData = {
@@ -30,6 +34,7 @@ function EditUserForm({ user, visible, onSave, onCancel }) {
     onSave(updatedData);
   };
 
+
   return (
     <Modal
       title="Редактировать пользователя"
@@ -37,8 +42,13 @@ function EditUserForm({ user, visible, onSave, onCancel }) {
       onOk={handleSubmit}
       onCancel={onCancel}
       footer={[
-        <Button key="back" onClick={onCancel}>Отмена</Button>,
-        <Button key="submit" type="primary" onClick={handleSubmit}>
+        <Button
+          key="back"
+          onClick={onCancel}>Отмена</Button>,
+        <Button
+          key="submit"
+          type="primary"
+          onClick={handleSubmit}>
           Сохранить
         </Button>,
       ]}
